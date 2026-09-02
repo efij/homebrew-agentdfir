@@ -4,7 +4,7 @@ class Agentdfir < Formula
   desc "Digital forensics and incident response for AI coding agents"
   homepage "https://github.com/efij/AgentDFIR"
   url "https://github.com/efij/AgentDFIR/archive/refs/tags/v0.12.1.tar.gz"
-  sha256 "ac94385b78570b19dfc59fce04d395abdeceac9d837183829e03d379901b3230"
+  sha256 "abaae4124f322dbcdf65f81008e4b3ecfc368e5bb88491e39d2541a4bc2e0aa8"
   license "MIT"
   head "https://github.com/efij/AgentDFIR.git", branch: "main"
 
