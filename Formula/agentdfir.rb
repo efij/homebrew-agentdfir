@@ -3,19 +3,19 @@
 class Agentdfir < Formula
   desc "Digital forensics and incident response for AI coding agents"
   homepage "https://github.com/efij/AgentDFIR"
-  url "https://github.com/efij/AgentDFIR/archive/refs/tags/v3.1.2.tar.gz"
-  sha256 "c4d44386d54854e21c7579e5f40dab994b8222f61095d979e68b9da880588e71"
+  url "https://github.com/efij/AgentDFIR/archive/refs/tags/v3.2.0.tar.gz"
+  sha256 "714ca8022157dab72f69e7ad6bead019e93fd4938f91446a19acc48119424735"
   license "MIT"
   head "https://github.com/efij/AgentDFIR.git", branch: "main"
 
   depends_on "go" => :build
 
   def install
-    ldflags = "-s -w -X github.com/efij/AgentDFIR/v3/internal/version.Version=v3.1.2"
+    ldflags = "-s -w -X github.com/efij/AgentDFIR/v3/internal/version.Version=v3.2.0"
     system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/agentdfir"
   end
 
   test do
-    assert_match "agentdfir v3.1.2", shell_output("#{bin}/agentdfir version")
+    assert_match "agentdfir v3.2.0", shell_output("#{bin}/agentdfir version")
   end
 end
